@@ -28,18 +28,25 @@ function tempCalc() {
 	$('#C').prepend(tempC);
 };
 
+function updateTemp() {
+	if ($('#temp-unit').is(':checked')) {
+		$('#C').show();
+		$('#F').hide(); 	
+	} else {
+		$('#F').show(); 
+		$('#C').hide();
+	};
+};
 
 $(document).ready(function() {
+//Fetches geo-loc and weather info
 	fetchOWM();
 	
+/* updates temp unit value on page refresh ("if user refreshed with toggle in "F"
+mode, it would display "C" while the toggle remained in "F") */
+	updateTemp();
+
 	$('#temp-unit').on('click', function() {
-		if ($('#temp-unit').is(':checked')) {
-			$('#C').show();
-			$('#F').hide(); 	
-		}
-		else {
-			$('#F').show(); 
-			$('#C').hide();
-			}	
+		updateTemp();	
 	});
 });
