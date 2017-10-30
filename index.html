@@ -7,105 +7,143 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Material Design Bootstrap</title>
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Weather</title>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- My Script -->
+    <script src="script.js"></script>
     <!-- Bootstrap core CSS -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/home/will/Documents/Git/Weather/bootstrap.min.css" rel="stylesheet"> 
     <!-- Material Design Bootstrap -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.1/css/mdb.min.css" rel="stylesheet">
+    <link href="/home/will/Documents/Git/Weather/mdb.min.css" rel="stylesheet">
     <!-- Your custom styles (optional) -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    
+   
 </head>
 
 <body>
 
-    <!-- Start your project here-->
-    <div style="height: 100vh">
-        <div class="flex-center flex-column">
-            <h1 class="animated fadeIn mb-4">Material Design for Bootstrap</h1>
+	<div class="hidden">
+		<li id="tempK"></li>
+		<li id="tempC">Test</li>
+		<li id="tempF">Test</li>
+		
+	</div>	
 
-            <h5 class="animated fadeIn mb-3">Thank you for using our product. We're glad you're with us.</h5>
-
-            <p class="animated fadeIn text-muted">MDB Team</p>
-        </div>
-    </div>
-    <!-- /Start your project here-->
-
-    <!-- SCRIPTS -->
-    <!-- JQuery -->
-    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
-    <!-- Bootstrap tooltips -->
-    <script type="text/javascript" src="js/popper.min.js"></script>
-    <!-- Bootstrap core JavaScript -->
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <!-- MDB core JavaScript -->
-    <script type="text/javascript" src="js/mdb.min.js"></script>
-
+<!--Mask-->
+<div class="view">
+    <!--Intro content-->
+    <div class="full-bg-img flex-center">
+        <div class="container verticalcenter">
 	
-	                                    
-<div class="container">
-  <div class="row">
-   
-    <div class="col">
-      One of three columns
-    </div>
+		<div class="row">
+		
+			<div class="col-md-3">
+			
+			
+			
+				                <!--Card-->
+				                <div class="card blur">
+				                <!--Card image-->
+    <img class="img-fluid" src="https://www.trawell.in/images/icons/icon-temp.png" alt="Card image cap">
+
+    <!--Card content-->
+    <div id= "test" class="card-body">
+        <!--Title-->
+        <h4 class="card-title">Temp</h4>
+        <!--Text-->
+        <p class="card-text" id="C">C</p> <p class="card-text" id="F">F</p>
+        	<label class="switch">
+  					<input id="temp-unit" type="checkbox" checked>
+  					<span class="slider round"></span>
+					</label>
     
-    <div class="col">
-      One of three columns
     </div>
-    
-    <div class="col">
-      One of three columns
-    </div>
-    
-  </div>
+
 </div>
-       
-	
-	
-	
-	
-	
-	 <!--
-	<div class="container">
-	
-		<div class="row">
-		
-			<div class="col-6">
-				<h1>Temp</h1> 
-				<h2 id="temp"></h2>
+<!--/.Card-->
+                
 			</div>
 			
-			<div class="col-6">
-				<h1>Humidity</h1>
-				<h2 id="humidity"></h2>
+			<div class="col-md-3">
+				                
+<!--Card-->
+<div class="card blur">
+
+    <!--Card image-->
+    
+    <img class="img-fluid" src="https://maxcdn.icons8.com/Share/icon/Science//humidity1600.png" alt="Card image cap">
+
+    <!--Card content-->
+    <div class="card-body">
+        <!--Title-->
+        <h4 class="card-title">Humidity</h4>
+        <!--Text-->
+        <p class="card-text" id="humidity"></p>
+        
+    </div>
+
+</div>
+<!--/.Card-->
+                
+			</div>
+		
+			<div class="col-md-3">
+				                
+<!--Card-->
+<div class="card blur">
+
+    <!--Card image-->
+    <img class="img-fluid" id="heightfix" src="https://png.icons8.com/wind-speed-103-107/ios7/1600" alt="Card image cap">
+
+    <!--Card content-->
+    <div class="card-body">
+        <!--Title-->
+        <h4 class="card-title">Wind Speed</h4>
+        <!--Text-->
+        <p class="card-text" id="windSpd"></p>
+        
+    </div>
+
+</div>
+<!--/.Card-->
+                
 			</div>
 			
-		</div>
-		
-		<div class="row">
-		
-			<div class="col-6">
-				<h1>Wind Speed</h1>
-				<h2 id="windSpd"></h2>
-			</div>
-			
-			<div class="col-6">
-				<h1>Weather</h1>
-				<h2 id="weather"></h2>
+			<div class="col-md-3">
+				                
+<!--Card-->
+<div class="card blur">
+
+    <!--Card image-->
+    <img class="img-fluid" src="https://maxcdn.icons8.com/Share/icon/Weather//partly_cloudy_day1600.png" alt="Card image cap">
+
+    <!--Card content-->
+    <div class="card-body">
+        <!--Title-->
+        <h4 class="card-title">Weather</h4>
+        <!--Text-->
+        <p class="card-text" id="weather"></p>
+        <!--<a href="#" class="btn btn-primary">Button</a> -->
+    </div>
+
+</div>
+<!--/.Card-->
+                
 			</div>
 			
 		</div>
 		
 	</div>
-
-		<button type="button" id="btn">Button</button> -->
+	<div >
+		
+	</div>
+    </div>
+    <!--/Intro content-->
+</div>
+<!--/.Mask-->
 	
 	</body>
 </html>
-
-
-
-
 
