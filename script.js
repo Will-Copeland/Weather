@@ -6,7 +6,7 @@ function fetchOWM() {
 		var lon = Math.round(weatherInfo[1]);	
 		
 		
-		$.get("http://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon="+ lon +"&APPID=ec76489de971d221ea7a5c4e29102371", function(g) {
+		$.get("https://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon="+ lon +"&APPID=ec76489de971d221ea7a5c4e29102371", function(g) {
 			$('.view').css('background','url("https://source.unsplash.com/1920x1080/?' +	g.weather[0].main.toLowerCase() + '")');	
 			$('#tempK').append(g.main.temp);
 			tempCalc();
