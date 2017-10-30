@@ -4,7 +4,7 @@ function fetchOWM() {
 		var weatherInfo = data.loc.split(",");		
 		var lat = Math.round(weatherInfo[0]);
 		var lon = Math.round(weatherInfo[1]);	
-		console.log(lon, lat);
+		
 		
 		$.get("http://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon="+ lon +"&APPID=ec76489de971d221ea7a5c4e29102371", function(g) {
 			$('.view').css('background','url("https://source.unsplash.com/1920x1080/?' +	g.weather[0].main.toLowerCase() + '")');	
@@ -21,7 +21,7 @@ function tempCalc() {
 	var tempK = $('#tempK').html();
 	$('#tempC').html(Math.round((tempK - 273.15), -1));
 	var tempC = $('#tempC').html();
-	var tempF = 9/5 * tempC +32;
+	var tempF = Math.round(9/5 * tempC +32);
 	$('#tempF').html(tempF);
 	$('#temp').append(tempC);
 	$('#F').prepend(tempF);
