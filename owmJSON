@@ -1,0 +1,46 @@
+
+
+{
+   "coord": {
+      "lon": -122,
+      "lat": 38
+   },
+   "weather": [
+      {
+         "id": 701,
+         "main": "Mist",
+         "description": "mist",
+         "icon": "50n"
+      }
+   ],
+   "base": "stations",
+   "main": {
+      "temp": 285.95,
+      "pressure": 1027,
+      "humidity": 87,
+      "temp_min": 284.15,
+      "temp_max": 287.15
+   },
+   "visibility": 14484,
+   "wind": {
+      "speed": 1.5,
+      "deg": 280
+   },
+   "clouds": {
+      "all": 40
+   },
+   "dt": 1515724800,
+   "sys": {
+      "type": 1,
+      "id": 374,
+      "message": 0.007,
+      "country": "US",
+      "sunrise": 1515770613,
+      "sunset": 1515805778
+   },
+   "id": 5339111,
+   "name": "Concord",
+   "cod": 200
+}
+
+

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Weather</title>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Script -->
+    <script src="script_fixed.js"></script>
+    <!-- Stylesheet-->
+    <link href="css_fixed.css" rel="stylesheet">
+    <!--Obligatory Lobster Font-->
+     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="card" id="loca">
+      <h1>Where Am I?</h1>
+
+        <li id="city">City: </li>
+        <li id="lon">Longitude: </li>
+        <li id="lat">Latitude: </li>
+
+    </div>
+
+    <div class="card" id="bInfo">
+      <h1>Basic Info</h1>
+      <img id="icon" src=" " alt="Weather Icon">
+
+        <h2 id="weath"></h2>
+        <label class="switch">
+          <input id="unit" type="checkbox">
+          <span class="slider round"></span>
+        </label>
+        <li id="temp">Current Temp: </li>
+        <li id="low">Low: </li>
+        <li id="high">High: </li>
+
+
+      <h2>Sunrise: </h2>
+        <h3 id="sunrise"></h3>
+      <h2>Sunset: </h2>
+        <h3 id="sunset"></h3>
+    </div>
+
+    <div class="card" id="dInfo">
+      <h1>Detailed Info</h1>
+
+        <li id="press">Pressure: </li>
+        <li id="windSpd">Wind Speed: </li>
+        <li id="windDir">Wind Direction: </li>
+    </div>
+  </div>
+<!--
+	<div class="hidden">
+		<li id="tempK"></li>
+		<li id="tempC"></li>
+		<li id="tempF"></li>
+	</div>
+-->
+
+
+	</body>
+</html>

@@ -1,0 +1,105 @@
+* {
+/*  border: 1px solid black; */
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {display:none;}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("https://image.flaticon.com/icons/png/128/120/120792.png");
+  background-position: top -23px right -20px;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+input:checked + .slider {
+
+  background-position: top -23px left -22px;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+html {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url("http://allswalls.com/images/abstract-blurry-wallpaper-1.jpg")
+
+}
+
+li {
+  font-size: 18px;
+}
+h2 {
+  font-size: 2em;
+  margin: 0;
+}
+.card {
+  font-family: 'Lobster', cursive;
+  font-size: 16px;
+  padding: 7px;
+  width: 20em;
+  height: auto;
+  display: block;
+  right: 400px;
+  margin: auto;
+  margin-top: 30px;
+  background-color:  #CB4F4C;
+  text-align: center;
+  box-shadow: 5px 7px black;
+  border-radius: 12px;
+}
+
+#loca {
+  background-image: url("http://allswalls.com/images/abstract-blurry-wallpaper-1.jpg");
+  background-position: top left;
+}
+#bInfo {
+  background-image: url("http://allswalls.com/images/abstract-blurry-wallpaper-1.jpg");
+  background-position: center left;
+}
+#dInfo {
+  background-image: url("http://allswalls.com/images/abstract-blurry-wallpaper-1.jpg");
+  background-position: bottom left;
+}
